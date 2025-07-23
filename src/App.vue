@@ -5,6 +5,10 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
+    <van-button type="primary">主要按钮</van-button>
+
+    <div class="name">主播必备</div>
+
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
@@ -20,7 +24,13 @@ import HelloWorld from './components/HelloWorld.vue'
   <RouterView />
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+.name {
+  font-weight: 400;
+  font-size: 56px;
+  color: #ffffff;
+  line-height: 78px;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;
