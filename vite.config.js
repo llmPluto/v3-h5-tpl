@@ -18,7 +18,7 @@ const apiConfig = {
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/h5',
+  base: '/h5/',
   define: {
     API_CONFIG: JSON.stringify({ AIM_ENV: process.env.AIM_ENV }),
   },
@@ -53,5 +53,8 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+  },
+  build: {
+    outDir: AIM_ENV === 'prod' ? './dist/prod' : './dist/dev',
   },
 })
